@@ -1,0 +1,168 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-0evHe/X+R7YkIZDRvuzKMRqM+OrBnVFBL6DOitfPri4tjfHxaWutUpFmBp4vmVor"
+      crossorigin="anonymous"
+    />
+
+    <title>Weather</title>
+
+    <script src="https://unpkg.com/axios/dist/axios.min.js"></script>
+
+    <link rel="stylesheet" href="src/styles.css" />
+  </head>
+  <body>
+    <div class="container">
+      <div class="row">
+        <div class="col-3">
+          <h1 class="text" id="cityName"></h1>
+        </div>
+        <div class="col-8">
+          <form class="search-city">
+            <label for="search">
+              <h2 class="text">
+                Change city
+              </h2>
+            </label>
+            <br />
+            <input
+              class="search-width"
+              type="text"
+              id="search"
+              placeholder="Search..."
+            />
+            <input class="lupa" type="submit" value="🔎" />
+          </form>
+        </div>
+      </div>
+      <img src="img/1273154.png" alt="geo" class="geo" />
+      <article>
+        Current Conditions
+      </article>
+      <span class="units">
+        <a href="#" id="celcius">
+          °C
+        </a>
+        |
+        <a href="#" id="fahrenheit">
+          °F
+        </a>
+      </span>
+      <div class="row">
+        <div class="col-3" id="square">
+          <span class="monday"></span>
+          <h4 class="today">
+            <strong class="deg degrees"> </strong>
+            <br />
+            ☁️
+            <span class="unit cloudy"> </span>
+            <br />
+            🌀
+            <span class="unit windSpeed"> </span>
+            <br />
+            💧
+            <span class="unit humidity"> </span>
+          </h4>
+        </div>
+        <div class="col-9">
+          <div class="row">
+            <div class="col-2">
+              <span class="days">
+                Tue
+              </span>
+              <strong class="degres degrees">
+                19°
+                <span class="gray">
+                  |
+                </span>
+                <span class="night degrees">
+                  11°
+                </span>
+              </strong>
+              <strong class="emoji">
+                🌦️
+              </strong>
+            </div>
+            <div class="col-2">
+              <span class="days">
+                Wed
+              </span>
+              <strong class="degres degrees">
+                19°
+                <span class="gray">
+                  |
+                </span>
+                <span class="night degrees">
+                  13°
+                </span>
+              </strong>
+              <strong class="emoji">
+                🌧️
+              </strong>
+            </div>
+            <div class="col-2">
+              <span class="days">
+                Thu
+              </span>
+              <strong class="degres degrees">
+                24°
+                <span class="gray">
+                  |
+                </span>
+                <span class="night degrees">
+                  14°
+                </span>
+              </strong>
+              <strong class="emoji">
+                🌧️
+              </strong>
+            </div>
+            <div class="col-2">
+              <span class="days">
+                Fri
+              </span>
+              <strong class="degres degrees">
+                26°
+                <span class="gray">
+                  |
+                </span>
+                <span class="night degrees">
+                  17°
+                </span>
+              </strong>
+              <strong class="emoji">
+                ⛈️
+              </strong>
+            </div>
+            <div class="col-2">
+              <span class="days">
+                Sat
+              </span>
+              <strong class="degres degrees">
+                27°
+                <span class="gray">
+                  |
+                </span>
+                <span class="night degrees">
+                  17°
+                </span>
+              </strong>
+              <strong class="emoji">
+                ⛈️
+              </strong>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <script src="src/index.js"></script>
+  </body>
+</html>
