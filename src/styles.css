@@ -24,16 +24,17 @@ h2 {
 h4 {
   font-size: 14px;
   font-weight: normal;
-  line-height: 20px;
+  line-height: 18px;
   text-align: left;
   text-shadow: 0 0 1px rgb(100, 100, 100);
   color: rgb(100, 100, 100);
 }
 
 a {
-  color: #0665b8;
+  color: rgb(100, 100, 100);
   text-decoration: none !important;
-  font-size: 20px;
+  font-size: 14px;
+  letter-spacing: -0.8px;
 }
 
 a:hover {
@@ -41,22 +42,15 @@ a:hover {
 }
 
 .container {
-  display: block;
-  margin-top: 80px;
+  max-width: 900px;
+  margin-top: 60px;
   background-color: rgb(225, 239, 255);
-  border: 1.5px solid #2f80c752;
-  box-shadow: 0 0 8px #066cc56b;
+  border: 1px solid #2f80c752;
+  box-shadow: 0 0 6px #066cc5a0;
   border-radius: 6px;
-  width: 58%;
-  padding: 0;
-  padding-left: 20px;
 }
 
-.units {
-  margin-left: 40px;
-}
-
-.text {
+.main-text {
   font-family: Verdana, Geneva, Tahoma, sans-serif;
   color: #0665b8;
   text-shadow: 0 0 2px #054f8f;
@@ -64,6 +58,19 @@ a:hover {
   letter-spacing: -0.6px;
   position: relative;
   left: -15px;
+}
+
+.units {
+  position: relative;
+  bottom: 10px;
+  font-size: 14px;
+  letter-spacing: -1px;
+}
+
+.deg {
+  color: white;
+  font-size: 28px;
+  text-shadow: 0 0 2px gray;
 }
 
 .search-city {
@@ -126,6 +133,7 @@ a:hover {
   color: #054f8f;
   font-size: 16px;
   letter-spacing: -0.6px;
+  line-height: 26px;
 }
 
 .col-9 {
@@ -147,12 +155,6 @@ a:hover {
   -o-transform: rotate(-45deg);
   transform: rotate(-45deg);
   margin: 18px;
-}
-
-.deg {
-  color: white;
-  font-size: 20px;
-  text-shadow: 0 0 2px gray;
 }
 
 .days {

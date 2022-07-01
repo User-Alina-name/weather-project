@@ -22,21 +22,18 @@ let result = document.querySelector(".monday");
 result.innerHTML = `${weekDay} ${hours}:${minuts}`;
 
 function showTemp(response) {
-  document.querySelector("#cityName").innerHTML = response.data.name;
-
+  let cityName = document.querySelector("#cityName");
   let temp = document.querySelector(".deg");
-  let currentTemp = Math.round(response.data.main.temp);
-  temp.innerHTML = `${currentTemp}°`;
-
   let wind = document.querySelector(".windSpeed");
-  let windSpeed = Math.round(response.data.wind.speed);
-  wind.innerHTML = `${windSpeed} km/h`;
-
-  let humid = document.querySelector(".humidity");
-  let humidity = response.data.main.humidity;
-  humid.innerHTML = `${humidity} mm`;
-
+  let humidity = document.querySelector(".humidity");
   let description = document.querySelector(".cloudy");
+
+  tempCelcius = response.data.main.temp;
+
+  cityName.innerHTML = response.data.name;
+  temp.innerHTML = Math.round(tempCelcius);
+  wind.innerHTML = `${Math.round(response.data.wind.speed)} km/h`;
+  humidity.innerHTML = `${response.data.main.humidity} mm`;
   description.innerHTML = response.data.weather[0].description;
 }
 
@@ -49,8 +46,8 @@ function showCity(city) {
 
 function searchSubmit(event) {
   event.preventDefault();
-  let city = document.querySelector("#search").value;
-  showCity(city);
+  let city = document.querySelector("#search");
+  showCity(city.value);
 }
 
 function searchLocation(position) {
@@ -65,10 +62,32 @@ function geoTemp(event) {
   navigator.geolocation.getCurrentPosition(searchLocation);
 }
 
+function displayFahrenheit(event) {
+  event.preventDefault();
+  let temp = document.querySelector(".deg");
+
+  let tempFahrenheit = (tempCelcius * 9) / 5 + 32;
+  temp.innerHTML = Math.round(tempFahrenheit);
+}
+
+function displayCelcius(event) {
+  event.preventDefault();
+  let temp = document.querySelector(".deg");
+  temp.innerHTML = Math.round(celciusLink);
+}
+
+let tempCelcius = null;
+
 let searchButton = document.querySelector(".search-city");
 searchButton.addEventListener("submit", searchSubmit);
 
 let currentTemp = document.querySelector(".geo");
 currentTemp.addEventListener("click", geoTemp);
+
+let linkFahrenheit = document.querySelector("#fahrenheit");
+linkFahrenheit.addEventListener("click", displayFahrenheit);
+
+let linkCelcius = document.querySelector("#celcius");
+linkCelcius.addEventListener("click", displayCelcius);
 
 showCity("Kyiv");
