@@ -1,9 +1,8 @@
 article {
-  color: rgb(100, 100, 100);
-  text-shadow: 0 0 1px rgb(100, 100, 100);
+  color: rgb(149, 149, 149);
   line-height: 10px;
   margin: 6px auto;
-  padding-left: 6px;
+  padding-left: 14px;
 }
 
 h1 {
@@ -13,25 +12,19 @@ h1 {
 
 h1,
 h5 {
-  margin-left: 20px;
-}
-
-h1,
-h2 {
-  text-shadow: 0 0 3px rgba(88, 88, 88, 0.656);
+  margin-left: 30px;
 }
 
 h4 {
-  font-size: 14px;
+  font-size: 16px;
   font-weight: normal;
   line-height: 18px;
   text-align: left;
-  text-shadow: 0 0 1px rgb(100, 100, 100);
-  color: rgb(100, 100, 100);
+  color: rgb(149, 149, 149);
 }
 
 a {
-  color: rgb(100, 100, 100);
+  color: rgb(149, 149, 149);
   text-decoration: none !important;
   font-size: 14px;
   letter-spacing: -0.8px;
@@ -44,16 +37,19 @@ a:hover {
 .container {
   max-width: 900px;
   margin-top: 60px;
-  background-color: rgb(225, 239, 255);
-  border: 1px solid #2f80c752;
-  box-shadow: 0 0 6px #066cc5a0;
+  padding-left: 24px;
+  background-image: linear-gradient(
+    rgb(108, 208, 255),
+    rgb(255, 250, 146),
+    rgb(255, 255, 255)
+  );
   border-radius: 6px;
 }
 
 .main-text {
   font-family: Verdana, Geneva, Tahoma, sans-serif;
-  color: #0665b8;
-  text-shadow: 0 0 2px #054f8f;
+  color: rgb(76, 76, 76);
+  text-shadow: 0 0 3px rgb(100, 100, 100);
   line-height: 30px;
   letter-spacing: -0.6px;
   position: relative;
@@ -70,24 +66,40 @@ a:hover {
 .deg {
   color: white;
   font-size: 28px;
-  text-shadow: 0 0 2px gray;
+  text-shadow: 0 0 2px rgb(100, 100, 100);
+  margin: 0 auto;
+  letter-spacing: -1px;
+}
+
+.unit {
+  font-style: italic;
+  color: rgb(190, 190, 190);
+}
+
+.icon {
+  max-width: 3rem;
+  position: relative;
+  bottom: 6px;
+  right: 6px;
 }
 
 .search-city {
   position: relative;
   top: 30px;
+  left: 72px;
   text-align: center;
   line-height: 30px;
 }
 
 .search-width {
-  width: 28rem;
-  border: 1.5px solid #2f80c752;
-  border-radius: 22px;
-  box-shadow: 0 0 6px #066cc56b;
+  width: 29rem;
+  border: 1.5px solid #066cc56b;
+  border-radius: 24px;
+  box-shadow: 0 0 6px #066cc5b7;
   padding: 8px;
+  margin: 8px;
   background: scroll;
-  color: rgb(100, 100, 100);
+  color: rgb(130, 130, 130);
   transition: all 200ms ease-in-out;
 }
 
@@ -98,9 +110,9 @@ a:hover {
 }
 
 .lupa {
-  border: 1.5px solid #2f80c752;
-  border-radius: 22px;
-  box-shadow: 0 0 6px #066cc56b;
+  border: 1.5px solid #066cc56b;
+  border-radius: 24px;
+  box-shadow: 0 0 6px #066cc5b7;
   padding: 8px 20px;
   margin-left: 0;
   background: scroll;
@@ -115,22 +127,22 @@ a:hover {
 }
 
 .geo {
-  width: 44px;
-  position: absolute;
-  right: 328px;
-  top: 152px;
+  max-width: 46px;
+  position: relative;
+  left: 44px;
+  top: 76px;
   transition: all 150ms ease-in-out;
   cursor: pointer;
 }
 
 .geo:hover {
-  width: 46px;
+  max-width: 50px;
 }
 
 .days,
 .monday {
-  text-shadow: 0 0 1.5px #0665b8;
-  color: #054f8f;
+  text-shadow: 0 0 1.5px rgb(149, 149, 149);
+  color: rgb(76, 76, 76);
   font-size: 16px;
   letter-spacing: -0.6px;
   line-height: 26px;
@@ -141,20 +153,21 @@ a:hover {
   padding: 0;
 }
 
-.col-2 {
-  width: 90px;
-  height: 90px;
+.forecast {
+  width: 94px;
+  height: 94px;
   background: #1eff0000;
-  border: 1.5px solid #2f80c752;
-  color: gray;
-  box-shadow: 0 0 8px #066cc56b;
+  border: 1.5px solid #066cc56b;
+  color: rgb(100, 100, 100);
+  box-shadow: 0 0 6px #066cc5b7;
   border-radius: 4px;
   -webkit-transform: rotate(-45deg);
   -moz-transform: rotate(-45deg);
   -ms-transform: rotate(-45deg);
   -o-transform: rotate(-45deg);
   transform: rotate(-45deg);
-  margin: 18px;
+  margin: 20px;
+  margin-top: 26px;
 }
 
 .days {
@@ -183,21 +196,20 @@ a:hover {
 }
 
 .gray {
-  color: rgb(100, 100, 100);
-  font-weight: lighter;
+  color: rgb(149, 149, 149);
+  font-weight: bold;
 }
 
 .night {
-  color: rgb(100, 100, 100);
+  color: rgb(130, 130, 130);
 }
 
 #square {
-  width: 132px;
-  height: 132px;
-  background: #f347ff00;
-  border: 1.5px solid #2f80c752;
+  width: 150px;
+  height: 150px;
+  border: 1.5px solid #066cc56b;
   margin: 20px;
   margin-top: 6px;
-  box-shadow: 0 0 8px #066cc56b;
+  box-shadow: 0 0 6px #066cc5b7;
   border-radius: 4px;
 }

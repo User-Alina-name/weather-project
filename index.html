@@ -21,7 +21,7 @@
   <body>
     <div class="container">
       <div class="row">
-        <div class="col-3">
+        <div class="col-2">
           <h1 class="main-text" id="cityName"></h1>
         </div>
         <div class="col-8">
@@ -39,33 +39,34 @@
             <input class="lupa" type="submit" value="🔎" />
           </form>
         </div>
-      </div>
+        <div class="col-2">
       <img src="img/1273154.png" alt="geo" class="geo" />
+        </div>
+      </div>
       <article>Current Conditions</article>
       <div class="row">
         <div class="col-3" id="square">
           <span class="monday"></span>
           <h4 class="today">
-            <strong class="deg degrees"></strong>
-            <span class="units">
-              <a href="#" id="celcius">°C</a>
-              |
+            <img 
+            src=""
+            alt="sky"
+            class="icon"></img><strong class="deg degrees"></strong>
+            <span class="units"
+              ><a href="#" id="celcius">°C</a> |
               <a href="#" id="fahrenheit">°F</a>
             </span>
-            <br />
-            ☁️
-            <span class="unit cloudy"> </span>
-            <br />
-            🌀
+            <div class="unit cloudy"></div>
+            Wind:
             <span class="unit windSpeed"> </span>
             <br />
-            💧
+            Humidity:
             <span class="unit humidity"> </span>
           </h4>
         </div>
         <div class="col-9">
           <div class="row">
-            <div class="col-2">
+            <div class="col-2 forecast">
               <span class="days"> Tue </span>
               <strong class="degres degrees">
                 19°
@@ -74,7 +75,7 @@
               </strong>
               <strong class="emoji"> 🌦️ </strong>
             </div>
-            <div class="col-2">
+            <div class="col-2 forecast">
               <span class="days"> Wed </span>
               <strong class="degres degrees">
                 19°
@@ -83,7 +84,7 @@
               </strong>
               <strong class="emoji"> 🌧️ </strong>
             </div>
-            <div class="col-2">
+            <div class="col-2 forecast">
               <span class="days"> Thu </span>
               <strong class="degres degrees">
                 24°
@@ -92,7 +93,7 @@
               </strong>
               <strong class="emoji"> 🌧️ </strong>
             </div>
-            <div class="col-2">
+            <div class="col-2 forecast">
               <span class="days"> Fri </span>
               <strong class="degres degrees">
                 26°
@@ -101,7 +102,7 @@
               </strong>
               <strong class="emoji"> ⛈️ </strong>
             </div>
-            <div class="col-2">
+            <div class="col-2 forecast">
               <span class="days"> Sat </span>
               <strong class="degres degrees">
                 27°
