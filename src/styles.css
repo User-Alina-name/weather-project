@@ -48,8 +48,8 @@ a:hover {
 
 .main-text {
   font-family: Verdana, Geneva, Tahoma, sans-serif;
-  color: rgb(76, 76, 76);
-  text-shadow: 0 0 3px rgb(100, 100, 100);
+  color: rgba(90, 90, 90, 0.686);
+  text-shadow: 0 0 2px rgb(100, 100, 100);
   line-height: 30px;
   letter-spacing: -0.6px;
   position: relative;
@@ -73,7 +73,7 @@ a:hover {
 
 .unit {
   font-style: italic;
-  color: rgb(190, 190, 190);
+  color: rgba(90, 90, 90, 0.9);
 }
 
 .icon {
@@ -131,6 +131,7 @@ a:hover {
   position: relative;
   left: 44px;
   top: 76px;
+  opacity: 80%;
   transition: all 150ms ease-in-out;
   cursor: pointer;
 }
@@ -142,7 +143,7 @@ a:hover {
 .days,
 .monday {
   text-shadow: 0 0 1.5px rgb(149, 149, 149);
-  color: rgb(76, 76, 76);
+  color: rgba(90, 90, 90, 0.9);
   font-size: 16px;
   letter-spacing: -0.6px;
   line-height: 26px;
