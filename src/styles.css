@@ -7,9 +7,9 @@ article {
 h4 {
   font-size: 16px;
   font-weight: normal;
-  line-height: 18px;
-  text-align: left;
-  color: rgb(149, 149, 149);
+  line-height: 22px;
+  text-align: center;
+  color: rgba(90, 90, 90, 0.6);
 }
 
 a {
@@ -31,16 +31,17 @@ a:hover {
   padding-left: 30px;
   background-image: linear-gradient(
     rgb(108, 208, 255),
-    rgb(255, 240, 146),
+    rgb(255, 233, 146),
     rgb(255, 255, 255)
   );
   border-radius: 8px;
 }
 
 .main-text {
+  text-align: center;
   font-size: 32px;
   font-family: Verdana, Geneva, Tahoma, sans-serif;
-  color: rgba(90, 90, 90, 0.5);
+  color: rgba(90, 90, 90, 0.9);
   text-shadow: 0 0 2px rgb(100, 100, 100);
   line-height: 30px;
   letter-spacing: -0.6px;
@@ -58,7 +59,7 @@ a:hover {
 .deg {
   color: white;
   font-size: 28px;
-  text-shadow: 0 0 2px rgb(100, 100, 100);
+  text-shadow: 0 0 2.5px rgb(90, 90, 90);
   margin: 0 auto;
   letter-spacing: -1px;
 }
@@ -95,7 +96,7 @@ a:hover {
 }
 
 .search-width:hover {
-  border-color: #0665b8;
+  border-color: #0665b8cb;
   background: white;
   box-shadow: 0 0 2px #066cc56b;
 }
@@ -113,7 +114,7 @@ a:hover {
 
 .lupa:hover {
   background: white;
-  border: 1.5px solid #0665b8;
+  border: 1.5px solid #0665b8cb;
   box-shadow: 0 0 2px #066cc56b;
 }
 
@@ -160,11 +161,11 @@ a:hover {
 .dayDeg {
   font-size: 20px;
   color: white;
-  text-shadow: 0 0 1.4px rgb(100, 100, 100);
+  text-shadow: 0 0 2px rgb(90, 90, 90);
 }
 
 .nightDeg {
-  color: rgb(130, 130, 130);
+  color: rgba(130, 130, 130, 0.8);
   font-size: 20px;
 }
 
