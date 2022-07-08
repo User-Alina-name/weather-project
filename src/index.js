@@ -21,34 +21,55 @@ if (minuts < 10) {
 let result = document.querySelector(".namedDay");
 result.innerHTML = `${weekDay} ${hours}:${minuts}`;
 
-function displayForecast() {
+function formatDate(timestamp) {
+  let date = new Date(timestamp * 1000);
+  let day = date.getDay();
+  let days = ["Sun", "Mon", "Tue", "Wed", "Thu", "Fri", "Sat"];
+
+  return days[day];
+}
+
+function displayForecast(response) {
+  let forecast = response.data.daily;
+
   let forecastEl = document.querySelector(".forecast");
 
   let forecastHTML = `<div class="row">`;
-  let days = ["Mon", "Tue", "Wed", "Thu", "Fri"];
-  days.forEach(function (day) {
-    forecastHTML = `${forecastHTML}
+  forecast.forEach(function (forecastDay, index) {
+    if (index < 5) {
+      forecastHTML =
+        forecastHTML +
+        `
         <div class="col-2 daysCol">
-          <div class="namedDay">${day}</div>
+          <div class="namedDay">${formatDate(forecastDay.dt)}</div>
           <img
-            src="http://openweathermap.org/img/wn/50d@2x.png"
+            src="http://openweathermap.org/img/wn/${
+              forecastDay.weather[0].icon
+            }@2x.png"
             alt="sky"
-            width=44px  
+            width=46px  
           />
           <div>
           <strong class="dayDeg">
-            26°
+            ${Math.round(forecastDay.temp.max)}°
             </strong>
             <strong class="nightDeg">
-            17°
+            ${Math.round(forecastDay.temp.min)}°
             </strong>
           </div>
         </div>
       `;
+    }
   });
 
   forecastHTML = forecastHTML + `</div>`;
   forecastEl.innerHTML = forecastHTML;
+}
+
+function getForecast(coordinates) {
+  let apiKey = "6e6ec494746b5229a9f2d526478c924c";
+  let apiUrl = `https://api.openweathermap.org/data/2.5/onecall?lat=${coordinates.lat}&lon=${coordinates.lon}&appid=${apiKey}&units=metric`;
+  axios.get(apiUrl).then(displayForecast);
 }
 
 function showTemp(response) {
@@ -70,6 +91,8 @@ function showTemp(response) {
     "src",
     `http://openweathermap.org/img/wn/${response.data.weather[0].icon}@2x.png`
   );
+
+  getForecast(response.data.coord);
 }
 
 function showCity(city) {
@@ -128,4 +151,3 @@ let linkCelcius = document.querySelector("#celcius");
 linkCelcius.addEventListener("click", displayCelcius);
 
 showCity("Kyiv");
-displayForecast();
