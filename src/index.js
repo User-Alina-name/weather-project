@@ -18,8 +18,38 @@ if (minuts < 10) {
   minuts = `0${minuts}`;
 }
 
-let result = document.querySelector(".monday");
+let result = document.querySelector(".namedDay");
 result.innerHTML = `${weekDay} ${hours}:${minuts}`;
+
+function displayForecast() {
+  let forecastEl = document.querySelector(".forecast");
+
+  let forecastHTML = `<div class="row">`;
+  let days = ["Mon", "Tue", "Wed", "Thu", "Fri"];
+  days.forEach(function (day) {
+    forecastHTML = `${forecastHTML}
+        <div class="col-2 daysCol">
+          <div class="namedDay">${day}</div>
+          <img
+            src="http://openweathermap.org/img/wn/50d@2x.png"
+            alt="sky"
+            width=44px  
+          />
+          <div>
+          <strong class="dayDeg">
+            26°
+            </strong>
+            <strong class="nightDeg">
+            17°
+            </strong>
+          </div>
+        </div>
+      `;
+  });
+
+  forecastHTML = forecastHTML + `</div>`;
+  forecastEl.innerHTML = forecastHTML;
+}
 
 function showTemp(response) {
   let cityName = document.querySelector("#cityName");
@@ -98,3 +128,4 @@ let linkCelcius = document.querySelector("#celcius");
 linkCelcius.addEventListener("click", displayCelcius);
 
 showCity("Kyiv");
+displayForecast();

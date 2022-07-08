@@ -1,18 +1,7 @@
 article {
   color: rgb(149, 149, 149);
   line-height: 10px;
-  margin: 6px auto;
   padding-left: 14px;
-}
-
-h1 {
-  font-size: 32px;
-  margin-top: 30px;
-}
-
-h1,
-h5 {
-  margin-left: 30px;
 }
 
 h4 {
@@ -32,28 +21,31 @@ a {
 
 a:hover {
   text-shadow: 0 0 1.5px rgb(149, 149, 149);
+  color: rgba(90, 90, 90, 0.5);
+  font-size: 14.5px;
 }
 
 .container {
   max-width: 900px;
   margin-top: 60px;
-  padding-left: 24px;
+  padding-left: 30px;
   background-image: linear-gradient(
     rgb(108, 208, 255),
     rgb(255, 250, 146),
     rgb(255, 255, 255)
   );
-  border-radius: 6px;
+  border-radius: 8px;
 }
 
 .main-text {
+  font-size: 32px;
   font-family: Verdana, Geneva, Tahoma, sans-serif;
-  color: rgba(90, 90, 90, 0.686);
+  color: rgba(90, 90, 90, 0.5);
   text-shadow: 0 0 2px rgb(100, 100, 100);
   line-height: 30px;
   letter-spacing: -0.6px;
   position: relative;
-  left: -15px;
+  top: 30px;
 }
 
 .units {
@@ -85,21 +77,20 @@ a:hover {
 
 .search-city {
   position: relative;
-  top: 30px;
+  top: 18px;
   left: 72px;
-  text-align: center;
-  line-height: 30px;
+  max-height: 50px;
 }
 
 .search-width {
   width: 29rem;
-  border: 1.5px solid #066cc56b;
+  border: 1.5px solid #78c0ff1b;
   border-radius: 24px;
-  box-shadow: 0 0 6px #066cc5b7;
   padding: 8px;
   margin: 8px;
   background: scroll;
-  color: rgb(130, 130, 130);
+  box-shadow: 0 0 8px #066cc560;
+  color: rgb(149, 149, 149);
   transition: all 200ms ease-in-out;
 }
 
@@ -110,9 +101,9 @@ a:hover {
 }
 
 .lupa {
-  border: 1.5px solid #066cc56b;
+  border: 1.5px solid #78c0ff1b;
   border-radius: 24px;
-  box-shadow: 0 0 6px #066cc5b7;
+  box-shadow: 0 0 8px #066cc560;
   padding: 8px 20px;
   margin-left: 0;
   background: scroll;
@@ -127,21 +118,21 @@ a:hover {
 }
 
 .geo {
-  max-width: 46px;
+  max-width: 44px;
   position: relative;
   left: 44px;
-  top: 76px;
-  opacity: 80%;
+  top: 48px;
+  opacity: 60%;
   transition: all 150ms ease-in-out;
   cursor: pointer;
 }
 
 .geo:hover {
-  max-width: 50px;
+  max-width: 46px;
+  opacity: 80%;
 }
 
-.days,
-.monday {
+.namedDay {
   text-shadow: 0 0 1.5px rgb(149, 149, 149);
   color: rgba(90, 90, 90, 0.9);
   font-size: 16px;
@@ -149,68 +140,48 @@ a:hover {
   line-height: 26px;
 }
 
-.col-9 {
-  margin: 10px;
-  padding: 0;
-}
-
 .forecast {
-  width: 94px;
-  height: 94px;
-  background: #1eff0000;
-  border: 1.5px solid #066cc56b;
-  color: rgb(100, 100, 100);
-  box-shadow: 0 0 6px #066cc5b7;
-  border-radius: 4px;
-  -webkit-transform: rotate(-45deg);
-  -moz-transform: rotate(-45deg);
-  -ms-transform: rotate(-45deg);
-  -o-transform: rotate(-45deg);
-  transform: rotate(-45deg);
-  margin: 20px;
-  margin-top: 26px;
+  position: relative;
+  bottom: 140px;
+  left: 190px;
+  text-align: center;
+  max-height: 30px;
 }
 
-.days {
-  position: fixed;
-  transform: rotate(45deg);
-  left: 54px;
-  top: 5px;
+.daysCol {
+  margin: 10px;
+  width: 114px;
+  height: 114px;
+  background: #78c0ff1b;
+  box-shadow: 0 0 8px #066cc560;
+  border-radius: 8px;
 }
 
-.emoji {
-  position: fixed;
-  transform: rotate(45deg);
-  font-size: 28px;
-  bottom: -2px;
-  left: 4px;
-}
-
-.degres {
+.dayDeg {
+  font-size: 20px;
   color: white;
-  position: fixed;
-  transform: rotate(45deg);
-  font-size: 18px;
-  bottom: 40px;
-  top: 32px;
-  text-shadow: 0 0 2px gray;
+  text-shadow: 0 0 1.4px rgb(100, 100, 100);
 }
 
-.gray {
-  color: rgb(149, 149, 149);
-  font-weight: bold;
-}
-
-.night {
+.nightDeg {
   color: rgb(130, 130, 130);
+  font-size: 20px;
+}
+
+.source {
+  color: rgba(108, 208, 255, 0.714);
+  text-align: right;
+  position: relative;
+  bottom: 24px;
+  right: 20px;
 }
 
 #square {
-  width: 154px;
-  height: 154px;
-  border: 1.5px solid #066cc56b;
-  margin: 20px;
-  margin-top: 6px;
-  box-shadow: 0 0 6px #066cc5b7;
-  border-radius: 4px;
+  text-align: center;
+  width: 164px;
+  height: 164px;
+  margin: 16px;
+  background: #78c0ff1b;
+  box-shadow: 0 0 8px #066cc560;
+  border-radius: 8px;
 }
