@@ -31,7 +31,7 @@ a:hover {
   padding-left: 30px;
   background-image: linear-gradient(
     rgb(108, 208, 255),
-    rgb(255, 233, 146),
+    rgb(255, 247, 128),
     rgb(255, 255, 255)
   );
   border-radius: 8px;
@@ -41,7 +41,7 @@ a:hover {
   text-align: center;
   font-size: 32px;
   font-family: Verdana, Geneva, Tahoma, sans-serif;
-  color: rgba(90, 90, 90, 0.9);
+  color: rgba(90, 90, 90, 0.7);
   text-shadow: 0 0 2px rgb(100, 100, 100);
   line-height: 30px;
   letter-spacing: -0.6px;
