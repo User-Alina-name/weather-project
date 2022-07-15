@@ -1,11 +1,11 @@
 let weekDays = [
+  "Sunday",
   "Monday",
   "Tuesday",
   "Wednesday",
   "Thursday",
   "Friday",
   "Saturday",
-  "Sunday",
 ];
 let now = new Date();
 let weekDay = weekDays[now.getDay()];
